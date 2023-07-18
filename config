@@ -1,0 +1,10 @@
+ServerAliveInterval 60
+ServerAliveCountMax 10
+
+Host 
+  HostName 
+  User ubuntu
+
+Host 
+  HostName 
+  User ubuntu
