@@ -57,6 +57,12 @@ pip install jupyterlab
 #Krop PDF
 sudo snap install krop
 
+wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
+cat oracle_vbox_2016.asc | gpg --dearmor | sudo tee /usr/share/keyrings/virtualbox.gpg > /dev/null 2>&1
+sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib" >> /etc/apt/sources.list.d/virtualbox.list  
+sudo apt update
+sudo apt install virtualbox-7.0
+
 sudo apt install net-tools
 
 #Sublime
@@ -64,6 +70,9 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | 
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text
+
+wget https://download.binance.com/electron-desktop/linux/production/binance-amd64-linux.deb
+sudo apt install ./binance-amd64-linux.deb
 
 #show ssh_key
 cat ~/.ssh/id_rsa.pub 
