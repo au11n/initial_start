@@ -1,5 +1,4 @@
-# initial_start
-Start Ubuntu desktop bash script
+# initial_start - Start Ubuntu desktop bash script
 
 #update all components
 
