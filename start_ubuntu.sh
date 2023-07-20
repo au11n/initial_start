@@ -2,8 +2,6 @@
 
 sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autopurge -y && sudo apt autoclean -y && sudo snap refresh
 
-gsettings set org.gnome.desktop.background picture-options 'none'
-
 #chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb
@@ -15,31 +13,33 @@ sudo apt install -y vlc
 sudo add-apt-repository ppa:libreoffice/ppa && sudo apt update
 sudo apt install -y libreoffice
 
-sudo apt remove firefox* -y 
-
+#pycharm
 sudo snap install pycharm-community --classic
 
-sudo ssh-keygen
+#ssh-keygen
+ssh-keygen
+
 
 sudo cp ./config ~/.ssh/config
-
 sudo cp ./.bash_aliases ~/.bash_aliases
-
 sudo cp ./.bashrc ~/.bashrc
-
 sudo cp ./.bash_history ~/.bash_history
+sudo chmod 666 ~/.bash_aliases
 
+#transmission
 sudo apt install transmission
 
+#for coding
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git
 
-#CSSource
+#for CS Source
 sudo dpkg --add-architecture i386
 sudo apt-get update
 sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
 sudo apt-get install libtcmalloc-minimal4:i386
 sudo apt-get install libgl1-mesa-glx:i386
 
+#telegram
 sudo snap install telegram-desktop
 
 #venv
@@ -59,7 +59,7 @@ sudo snap install krop
 
 wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
 cat oracle_vbox_2016.asc | gpg --dearmor | sudo tee /usr/share/keyrings/virtualbox.gpg > /dev/null 2>&1
-sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib" >> /etc/apt/sources.list.d/virtualbox.list  
+sudo bash -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox.gpg] https://download.virtualbox.org/virtualbox/debian jammy contrib" >> /etc/apt/sources.list.d/virtualbox.list'
 sudo apt update
 sudo apt install virtualbox-7.0
 
@@ -74,5 +74,10 @@ sudo apt-get install sublime-text
 wget https://download.binance.com/electron-desktop/linux/production/binance-amd64-linux.deb
 sudo apt install ./binance-amd64-linux.deb
 
+#desktop.background off
+gsettings set org.gnome.desktop.background picture-options 'none'
+
 #show ssh_key
 cat ~/.ssh/id_rsa.pub 
+
+sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autopurge -y && sudo apt autoclean -y && sudo snap refresh
