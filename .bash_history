@@ -3,5 +3,5 @@ nano ~/.bash_aliases
 nano .bash_history 
 nano ~/.bashrc
 nano ~/.ssh/config
-sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autopurge && sudo apt autoclean && sudo snap refresh
+sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autopurge && sudo apt autoclean && flatpak update
 uniqh
