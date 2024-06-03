@@ -1,45 +1,23 @@
-# initial_start - Start Ubuntu desktop bash script
+Initial Start
+Этот репозиторий создан для упрощения процесса переустановки операционной системы на моем ноутбуке. С его помощью я могу быстро установить все необходимые программы и скрипты для работы. В репозитории содержатся следующие скрипты:
 
-#update all components
+Скрипты
+start.sh
+Этот скрипт обновляет систему и устанавливает необходимые программы и пакеты.
 
-#wget and install chrome
+sync_flashdrive.sh
+Этот скрипт синхронизирует определенные папки и файлы с USB-накопителем. Скрипт необходимо запускать с накопителя. Это простой вариант быстрого бэкапа.
 
-#install vlc 
+file_chng.py
+Этот скрипт отслеживает изменения в файлах в указанной директории и выводит информацию о добавленных, измененных или удаленных файлах. Я использую этот скрипт для понимания, какие файлы изменились, чтобы случайно не испортить данные в архиве на накопителе.
 
-#install libreoffice
+start.sh: Запустите этот скрипт для обновления системы и установки всех необходимых программ и пакетов. Используйте следующую команду:
+./start.sh
 
-#install pycharm
+sync_flashdrive.sh: Запустите этот скрипт для синхронизации ваших данных с USB-накопителем. Используйте следующую команду:
+./sync_flashdrive.sh
 
-#ssh-keygen
+file_chng.py: Запустите этот скрипт для отслеживания изменений в файлах в текущей директории. Используйте следующую команду:
+python3 file_chng.py
 
-#copy config files: config, .bash_aliases, .bashrc, .bash_history
-
-#chmod 666 for ~/.bash_aliases
-
-#install transmission
-
-#install lib's for coding
-
-#install lib's for CS Source
-
-#install telegram
-
-#install lib's for python venv
-
-#install jupyterlab
-
-#install Krop PDF
-
-#install virtualbox 7.0
-
-#install net-tools
-
-#install Sublime text editor
-
-#wget and istall binance
-
-#desktop.background off
-
-#update all components
-
-#show ssh_key
+Эти скрипты помогут вам быстро настроить систему и сохранить ваши данные при переустановке операционной системы.

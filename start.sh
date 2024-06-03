@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autopurge && sudo apt autoclean && flatpak update
+sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autopurge && sudo apt autoclean && flatpak update && snap refresh
 
 #vlc 
 sudo apt install -y vlc
@@ -28,7 +28,6 @@ wget https://download.binance.com/electron-desktop/linux/production/binance-amd6
 sudo apt install ./binance-amd64-linux.deb
 
 sudo flatpak install flathub com.google.Chrome
-sudo flatpak install flathub com.jetbrains.PyCharm-Community
 sudo flatpak install flathub com.github.arminstraub.krop
 sudo flatpak install flathub com.anydesk.Anydesk
 sudo flatpak install flathub org.telegram.desktop
@@ -47,8 +46,16 @@ sudo apt install breeze
 #     "scrollbar": true
 # }
 
-
 #lsp
 go install golang.org/x/tools/gopls@latest
 sudo apt-get install python3-pylsp
 sudo snap install bash-language-server --classic
+
+#snapstore
+sudo apt install snapd
+
+#syncthing
+sudo apt install syncthing
+
+#keepassxc
+sudo apt install keepassxc
