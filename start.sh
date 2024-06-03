@@ -8,7 +8,7 @@ sudo apt install -y vlc
 #for coding
 sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git micro
 
-#for CS Source
+#for CS Source:)
 sudo dpkg --add-architecture i386
 sudo apt-get update
 sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
@@ -31,6 +31,7 @@ sudo flatpak install flathub com.google.Chrome
 sudo flatpak install flathub com.github.arminstraub.krop
 sudo flatpak install flathub com.anydesk.Anydesk
 sudo flatpak install flathub org.telegram.desktop
+sudo apt install tilix
 
 #text_editor
 sudo apt install kate
