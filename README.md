@@ -1,23 +1,32 @@
-Initial Start
-Этот репозиторий создан для упрощения процесса переустановки операционной системы на моем ноутбуке. С его помощью я могу быстро установить все необходимые программы и скрипты для работы. В репозитории содержатся следующие скрипты:
+#Initial Start
+This repository is designed to simplify the process of reinstalling the operating system on my laptop. 
+With its help, I can quickly install all the necessary programs and scripts for work. 
+The repository contains the following scripts:
 
-Скрипты
+##Scripts
 start.sh
-Этот скрипт обновляет систему и устанавливает необходимые программы и пакеты.
+This script updates the system and installs the necessary programs and packages.
 
 sync_flashdrive.sh
-Этот скрипт синхронизирует определенные папки и файлы с USB-накопителем. Скрипт необходимо запускать с накопителя. Это простой вариант быстрого бэкапа.
+This script synchronizes specific folders and files with a USB drive. 
+The script must be run from the drive. 
+This is a simple quick backup option.
 
 file_chng.py
-Этот скрипт отслеживает изменения в файлах в указанной директории и выводит информацию о добавленных, измененных или удаленных файлах. Я использую этот скрипт для понимания, какие файлы изменились, чтобы случайно не испортить данные в архиве на накопителе.
+This script tracks changes in files in the specified directory and provides information about added, modified, or deleted files. 
+I use this script to understand which files have changed to avoid accidentally corrupting data in the archive on the drive.
 
-start.sh: Запустите этот скрипт для обновления системы и установки всех необходимых программ и пакетов. Используйте следующую команду:
+##Usage
+start.sh: Run this script to update the system and install all necessary programs and packages. 
+Use the following command:
 ./start.sh
 
-sync_flashdrive.sh: Запустите этот скрипт для синхронизации ваших данных с USB-накопителем. Используйте следующую команду:
+sync_flashdrive.sh: Run this script to synchronize your data with the USB drive. 
+Use the following command:
 ./sync_flashdrive.sh
 
-file_chng.py: Запустите этот скрипт для отслеживания изменений в файлах в текущей директории. Используйте следующую команду:
+file_chng.py: Run this script to track changes in files in the current directory. 
+Use the following command:
 python3 file_chng.py
 
-Эти скрипты помогут вам быстро настроить систему и сохранить ваши данные при переустановке операционной системы.
+These scripts will help you quickly set up the system and preserve your data when reinstalling the operating system.
