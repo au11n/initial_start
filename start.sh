@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autopurge
 sudo apt install -y vlc
 
 #for coding
-sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git
+sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git micro
 
 #for CS Source
 sudo dpkg --add-architecture i386
@@ -33,3 +33,22 @@ sudo flatpak install flathub com.github.arminstraub.krop
 sudo flatpak install flathub com.anydesk.Anydesk
 sudo flatpak install flathub org.telegram.desktop
 
+#text_editor
+sudo apt install kate
+sudo apt install breeze
+# micro ~/.config/micro/settings.json
+# {
+#     "hlsearch": true,
+#     "lsp.autocompleteDetails": true,
+#     "lsp.servers": {
+#         "go": "gopls",
+#         "python": "pylsp"
+#     },
+#     "scrollbar": true
+# }
+
+
+#lsp
+go install golang.org/x/tools/gopls@latest
+sudo apt-get install python3-pylsp
+sudo snap install bash-language-server --classic
