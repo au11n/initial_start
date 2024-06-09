@@ -4,16 +4,17 @@ from datetime import datetime
 
 STATE_FILE = "file_state.pkl"
 
-def get_file_info(root_dir):
+def get_file_info(directories):
     file_info = {}
-    for root, dirs, files in os.walk(root_dir):
-        for file in files:
-            file_path = os.path.join(root, file)
-            try:
-                file_stat = os.stat(file_path)
-                file_info[file_path] = file_stat.st_mtime
-            except Exception as e:
-                print(f"Error processing file {file_path}: {e}")
+    for root_dir in directories:
+        for root, dirs, files in os.walk(root_dir):
+            for file in files:
+                file_path = os.path.join(root, file)
+                try:
+                    file_stat = os.stat(file_path)
+                    file_info[file_path] = file_stat.st_mtime
+                except Exception as e:
+                    print(f"Error processing file {file_path}: {e}")
     return file_info
 
 def load_previous_state():
@@ -41,9 +42,16 @@ def compare_states(prev_state, curr_state):
     return changes
 
 def main():
-    root_dir = "."  # текущая директория, можно изменить на любую другую
+    directories = [
+        os.path.expanduser("~/Documents"),
+        os.path.expanduser("~/cod"),
+        os.path.expanduser("~/Kino"),
+        os.path.expanduser("~/Music"),
+        os.path.expanduser("~/Pictures")
+    ]
+
     prev_state = load_previous_state()
-    curr_state = get_file_info(root_dir)
+    curr_state = get_file_info(directories)
 
     changes = compare_states(prev_state, curr_state)
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
