@@ -6,12 +6,12 @@ sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autopurge
 sudo apt install -y vlc
 
 #for coding
-sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git
+sudo apt install -y make build-essential zlib1g-dev libbz2-dev build-essential libssl-dev libffi-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git
 
 #venv
 sudo apt install python3-venv
-sudo apt-get install -y python3-pip
-sudo apt-get install build-essential libssl-dev libffi-dev python-dev-is-python3
+sudo apt install -y python3-pip
+sudo apt install build-essential libffi-dev python-dev-is-python3
 sudo apt install build-essential libssl-dev libffi-dev python3-dev
 sudo apt install python3-venv -y
 #python3 -m venv venv
@@ -25,9 +25,10 @@ sudo flatpak install flathub com.github.arminstraub.krop
 sudo flatpak install flathub com.anydesk.Anydesk
 sudo flatpak install flathub org.telegram.desktop
 sudo apt install tilix
+sudo apt install tree
+sudo apt install jq
+sudo apt linux-cpupower
 
-#text_editor
-sudo apt install kate breeze
 
 sudo apt install micro
 # micro ~/.config/micro/settings.json
